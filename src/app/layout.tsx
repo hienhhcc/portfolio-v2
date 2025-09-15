@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ReactNode } from "react";
+import { ThemeProvider } from "@/app/components/ThemeProvider";
+import Navbar from "@/app/components/Navbar";
 
 const geistSans = Inter({
   variable: "--font-geist-sans",
@@ -15,11 +18,23 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable}  antialiased`}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${geistSans.variable} bg-background text-foreground antialiased`}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          <main className="container mx-auto px-4">{children}</main>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
