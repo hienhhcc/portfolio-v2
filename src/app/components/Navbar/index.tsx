@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background">
-      <nav className="container flex items-center justify-between h-16">
+      <nav className="container flex items-center justify-between h-16 mx-auto">
         <Link href="/" className="font-bold">
           Hienhhcc
         </Link>
