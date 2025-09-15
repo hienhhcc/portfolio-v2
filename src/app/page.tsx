@@ -1,3 +1,10 @@
+import Hero from "@/app/components/Hero";
+import { Fragment } from "react";
+
 export default function Home() {
-  return <h1 className="text-3xl">Hi there</h1>;
+  return (
+    <Fragment>
+      <Hero />
+    </Fragment>
+  );
 }

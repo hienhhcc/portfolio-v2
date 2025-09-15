@@ -4,7 +4,6 @@ import "./globals.css";
 import { ReactNode } from "react";
 import { ThemeProvider } from "@/app/components/ThemeProvider";
 import Navbar from "@/app/components/Navbar";
-import Footer from "@/app/components/Footer";
 
 const geistSans = Inter({
   variable: "--font-geist-sans",
