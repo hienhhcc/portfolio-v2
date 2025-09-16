@@ -4,6 +4,7 @@ import "./globals.css";
 import { ReactNode } from "react";
 import { ThemeProvider } from "@/app/components/ThemeProvider";
 import Navbar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer";
 
 const geistSans = Inter({
   variable: "--font-geist-sans",
@@ -21,9 +22,9 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="w-full h-full">
       <body
-        className={`${geistSans.variable} bg-background text-foreground antialiased`}
+        className={`${geistSans.variable} bg-background text-foreground antialiased flex flex-col w-full h-full`}
       >
         <ThemeProvider
           attribute="class"
@@ -32,8 +33,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main className="container mx-auto px-4">{children}</main>
-          {/* <Footer /> */}
+          <main className="container mx-auto px-4 flex-1">{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

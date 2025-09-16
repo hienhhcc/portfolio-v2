@@ -1,5 +1,20 @@
-import { navLinks } from "@/app/constants";
+import { CodeIcon, MailIcon, RocketIcon, UserIcon } from "lucide-react";
 import Link from "next/link";
+
+export const navLinks = [
+  {
+    href: "#projects",
+    label: "Projects",
+    icon: <RocketIcon className="w-4 h-4" />,
+  },
+  { href: "#about", label: "About", icon: <UserIcon className="w-4 h-4" /> },
+  { href: "#skills", label: "Skills", icon: <CodeIcon className="w-4 h-4" /> },
+  {
+    href: "#contact",
+    label: "Contact",
+    icon: <MailIcon className="w-4 h-4" />,
+  },
+];
 
 export default function DesktopNavLinks() {
   return (

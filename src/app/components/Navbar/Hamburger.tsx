@@ -1,8 +1,15 @@
 "use client";
-import { navLinks } from "@/app/constants";
+import { navLinks } from "@/app/components/Navbar/DesktopNavLinks";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Link } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { MenuIcon } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Hamburger() {
@@ -17,20 +24,26 @@ export default function Hamburger() {
           className="md:hidden"
           aria-label="Menu"
         >
-          <Menu className="h-6 w-6" />
+          <MenuIcon className="h-6 w-6" />
         </Button>
       </SheetTrigger>
       <SheetContent side="right" className="w-64">
-        <nav className="flex flex-col gap-6 mt-10">
+        <SheetHeader>
+          <SheetTitle>Navigations</SheetTitle>
+        </SheetHeader>
+
+        <nav className="flex flex-col gap-6 mt-2 px-4">
           {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)} // close after click
-              className="text-lg hover:underline"
-            >
-              {link.label}
-            </Link>
+            <div key={link.href} className="flex gap-2 items-center">
+              {link.icon}
+              <Link
+                href={link.href}
+                onClick={() => setOpen(false)} // close after click
+                className="text-lg hover:underline"
+              >
+                {link.label}
+              </Link>
+            </div>
           ))}
         </nav>
       </SheetContent>

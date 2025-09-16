@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
+import TypeWriter from "@/app/components/Hero/Typewriter";
+import NameText from "@/app/components/Hero/NameText";
 
 export default function Hero() {
   return (
@@ -8,9 +10,9 @@ export default function Hero() {
       <Avatar className="h-28 w-28">
         <AvatarImage src="/me.jpg" alt="Your Name" />
       </Avatar>
-      <h1 className="text-4xl font-bold">Hi, I’m Vũ Vinh Hiển 👋</h1>
-      <p className="text-muted-foreground max-w-lg">
-        Frontend Engineer • React | Next.js | TailwindCSS
+      <NameText />
+      <p className="text-xl font-semibold text-foreground max-w-lg whitespace-nowrap">
+        <TypeWriter />
       </p>
       <div className="flex gap-4">
         <Button asChild>

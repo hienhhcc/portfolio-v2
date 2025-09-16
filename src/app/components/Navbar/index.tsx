@@ -1,4 +1,5 @@
 import DesktopNavLinks from "@/app/components/Navbar/DesktopNavLinks";
+import Hamburger from "@/app/components/Navbar/Hamburger";
 import ThemeToggle from "@/app/components/Navbar/ThemeToggle";
 import Link from "next/link";
 
@@ -10,7 +11,10 @@ export default function Navbar() {
           Hienhhcc
         </Link>
         <DesktopNavLinks />
-        <ThemeToggle />
+        <div className="flex gap-2">
+          <ThemeToggle />
+          <Hamburger />
+        </div>
       </nav>
     </header>
   );
