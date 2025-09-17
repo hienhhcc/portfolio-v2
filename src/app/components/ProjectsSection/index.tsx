@@ -25,7 +25,7 @@ export default function ProjectsSection() {
 
             <CardContent className="flex h-full flex-col gap-4">
               <div className="flex-1 w-full aspect-video rounded-md overflow-hidden relative">
-                <Image src={p.image} alt={p.title} fill objectFit="cover" />
+                <Image src={p.image} alt={p.title} fill objectFit="contain" />
               </div>
               <div className="flex flex-col gap-1">
                 {p.frontendTech != null && (
@@ -77,7 +77,7 @@ const projects: Project[] = [
             </ExternalLink>
           </p>
         }
-      ></ProjectDescription>
+      />
     ),
     frontendTech: [
       "ReactJs",
