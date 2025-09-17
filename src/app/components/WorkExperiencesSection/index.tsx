@@ -3,33 +3,26 @@ import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { WorkExperience } from "@/app/types";
+import { WorkExperience, WorkProject } from "@/app/types";
 import ExternalLink from "@/app/components/ExternalLink";
 import { EyeIcon } from "lucide-react";
+import { projects } from "@/app/constants";
+import { formatWorkStartEndDate } from "@/app/utils/formatters";
 
 const workExperiences: WorkExperience[] = [
   {
-    company: "MealSuite",
+    id: "1548b476-0331-403f-a6cf-6310001008fc",
+    company: "HDWEBSOFT - Software Development Company",
     position: "Frontend Engineer",
-    startDate: "Jan 2023",
-    endDate: "Present",
-    projects: [
-      {
-        name: "Healthcare Meal Planner",
-        memberCount: 6,
-        description:
-          "A platform helping healthcare facilities manage meal plans for patients with dietary restrictions.",
-        image: "/mealsuite.png",
-        frontendTech: ["Next.js", "TypeScript", "TailwindCSS", "GraphQL"],
-        backendTech: ["Next.js", "TypeScript", "TailwindCSS", "GraphQL"],
-        responsibilities: [
-          "Implemented complex UI flows for patient meal customization",
-          "Integrated GraphQL API with Apollo Client",
-          "Optimized performance, reducing load time by 40%",
-        ],
-        live: "https://mealsuite.com",
-      },
-    ],
+    startDate: new Date("2021-08"),
+    endDate: new Date(),
+    projects: projects.filter((p) => {
+      if ("companyId" in p) {
+        return p.companyId === "1548b476-0331-403f-a6cf-6310001008fc";
+      }
+
+      return false;
+    }) as WorkProject[],
   },
 ];
 
@@ -40,15 +33,14 @@ export default function WorkExperiencesSection() {
       <div className="flex flex-col gap-12">
         {workExperiences.map((exp) => (
           <div key={exp.company}>
-            {/* Company / Role */}
             <h3 className="text-2xl font-semibold">
               {exp.position} @ {exp.company}
             </h3>
             <p className="text-muted-foreground mb-6">
-              {exp.startDate} — {exp.endDate}
+              {formatWorkStartEndDate(exp.startDate)} -{" "}
+              {formatWorkStartEndDate(exp.endDate)}
             </p>
 
-            {/* Projects */}
             <div className="grid md:grid-cols-2 gap-8">
               {exp.projects.map((proj) => (
                 <Card key={proj.name}>

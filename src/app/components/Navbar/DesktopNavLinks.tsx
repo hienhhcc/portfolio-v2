@@ -1,7 +1,18 @@
-import { CodeIcon, MailIcon, RocketIcon, UserIcon } from "lucide-react";
+import {
+  Briefcase,
+  CodeIcon,
+  MailIcon,
+  RocketIcon,
+  UserIcon,
+} from "lucide-react";
 import Link from "next/link";
 
 export const navLinks = [
+  {
+    href: "#experiences",
+    label: "Experiences",
+    icon: <Briefcase className="w-4 h-4" />,
+  },
   {
     href: "#projects",
     label: "Projects",

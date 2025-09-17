@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ReactNode } from "react";
@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   title: "My Portfolio",
   description: "This is Hienhhcc's portfolio",
 };
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export default function RootLayout({
   children,
@@ -22,7 +26,11 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="w-full h-full">
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className="w-full h-full scroll-smooth"
+    >
       <body
         className={`${geistSans.variable} bg-background text-foreground antialiased flex flex-col w-full h-full`}
       >

@@ -1,18 +1,21 @@
 import ExternalLink from "@/app/components/ExternalLink";
 import GithubLinks from "@/app/components/ProjectsSection/GithubLinks";
 import ProjectDescription from "@/app/components/ProjectsSection/ProjectDescription";
-import { PersonalProject } from "@/app/types";
+import { projects } from "@/app/constants";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import Link from "next/link";
 
-export default function ProjectsSection() {
+export default function PersonalProjectsSection() {
+  const personalProjects = projects.filter((p) => p.isPersonal);
+
   return (
     <section id="projects" className="py-16">
       <h2 className="text-3xl font-bold mb-8 text-center">Personal Projects</h2>
       <div className="grid md:grid-cols-2 gap-8">
-        {projects.map((p) => (
+        {personalProjects.map((p) => (
           <Card key={p.name}>
             <CardHeader>
               <CardTitle className="text-xl font-bold">{p.name}</CardTitle>
@@ -41,7 +44,10 @@ export default function ProjectsSection() {
                   </div>
                 </div>
               </div>
-              <div className="flex ml-auto justify-self-end gap-4">
+              <div className="flex items-center ml-auto justify-self-end gap-4">
+                <Button variant="outline" asChild>
+                  <Link href={`/projects/${p.id}`}>View detail</Link>
+                </Button>
                 {p.live != null && (
                   <Button asChild>
                     <ExternalLink href={p.live} target="_blank">
@@ -58,61 +64,3 @@ export default function ProjectsSection() {
     </section>
   );
 }
-
-const projects: PersonalProject[] = [
-  {
-    name: "Job Board Platform",
-    description: (
-      <ProjectDescription
-        summaryText={
-          "A full-stack job platform that empowers job seekers to discover and apply for opportunities, while providing organizations with tools to manage job postings and applicants."
-        }
-        other={
-          <p className="text-muted-foreground text-sm">
-            Inspired by{" "}
-            <ExternalLink href="https://www.youtube.com/@WebDevSimplified">
-              Web Dev Simplified
-            </ExternalLink>
-          </p>
-        }
-      />
-    ),
-    frontendTech: [
-      "ReactJs",
-      "Next.js App Router",
-      "TailwindCSS",
-      "shadcn/ui",
-      "zod",
-      "@tanstack/react-table",
-      "@mdxeditor/editor",
-      "Uploadthing",
-    ],
-    backendTech: ["NestJS", "Postgres", "Drizzle", "Clerk", "Inngest"],
-    image: "/projects/job-board.png",
-    github: [
-      {
-        title: "FrontEnd",
-        link: "https://github.com/hienhhcc/job-board-fe",
-      },
-      {
-        title: "BackEnd",
-        link: "https://github.com/hienhhcc/job-board-be",
-      },
-    ],
-  },
-  {
-    name: "Notes App",
-    description:
-      "A note management application allow user to create, read, update delete notes",
-    frontendTech: ["ReactJs"],
-    backendTech: ["ExpressJs", "Postgresql", "Drizzle"],
-    image: "/projects/notes-app.png",
-    github: [
-      {
-        title: "FrontEnd",
-        link: "https://github.com/hienhhcc/notes-app-react",
-      },
-      { title: "BackEnd", link: "https://github.com/hienhhcc/notes-app" },
-    ],
-  },
-];
