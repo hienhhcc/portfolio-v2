@@ -1,7 +1,7 @@
 import ExternalLink from "@/app/components/ExternalLink";
 import GithubLinks from "@/app/components/ProjectsSection/GithubLinks";
 import ProjectDescription from "@/app/components/ProjectsSection/ProjectDescription";
-import { Project } from "@/app/types";
+import { PersonalProject } from "@/app/types";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
@@ -10,38 +10,36 @@ import Image from "next/image";
 export default function ProjectsSection() {
   return (
     <section id="projects" className="py-16">
-      <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
+      <h2 className="text-3xl font-bold mb-8 text-center">Personal Projects</h2>
       <div className="grid md:grid-cols-2 gap-8">
         {projects.map((p) => (
-          <Card key={p.title}>
+          <Card key={p.name}>
             <CardHeader>
-              <CardTitle className="text-xl font-bold">{p.title}</CardTitle>
-              {typeof p.desc === "string" ? (
-                <ProjectDescription summaryText={p.desc} />
+              <CardTitle className="text-xl font-bold">{p.name}</CardTitle>
+              {typeof p.description === "string" ? (
+                <ProjectDescription summaryText={p.description} />
               ) : (
-                p.desc
+                p.description
               )}
             </CardHeader>
 
             <CardContent className="flex h-full flex-col gap-4">
               <div className="flex-1 w-full aspect-video rounded-md overflow-hidden relative">
-                <Image src={p.image} alt={p.title} fill objectFit="contain" />
+                <Image src={p.image} alt={p.name} fill objectFit="contain" />
               </div>
               <div className="flex flex-col gap-1">
-                {p.frontendTech != null && (
-                  <div className="flex flex-row gap-1 items-center">
-                    <div className="flex gap-2 flex-wrap">
-                      {p.frontendTech.map((tech) => (
-                        <Badge key={tech}>{tech}</Badge>
-                      ))}
-                      {p.backendTech.map((tech) => (
-                        <Badge variant="secondary" key={tech}>
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
+                <div className="flex flex-row gap-1 items-center">
+                  <div className="flex gap-2 flex-wrap">
+                    {p.frontendTech?.map((tech) => (
+                      <Badge key={tech}>{tech}</Badge>
+                    ))}
+                    {p.backendTech?.map((tech) => (
+                      <Badge variant="secondary" key={tech}>
+                        {tech}
+                      </Badge>
+                    ))}
                   </div>
-                )}
+                </div>
               </div>
               <div className="flex ml-auto justify-self-end gap-4">
                 {p.live != null && (
@@ -61,10 +59,10 @@ export default function ProjectsSection() {
   );
 }
 
-const projects: Project[] = [
+const projects: PersonalProject[] = [
   {
-    title: "Job Board Platform",
-    desc: (
+    name: "Job Board Platform",
+    description: (
       <ProjectDescription
         summaryText={
           "A full-stack job platform that empowers job seekers to discover and apply for opportunities, while providing organizations with tools to manage job postings and applicants."
@@ -103,8 +101,9 @@ const projects: Project[] = [
     ],
   },
   {
-    title: "Notes App",
-    desc: "A note management application allow user to create, read, update delete notes",
+    name: "Notes App",
+    description:
+      "A note management application allow user to create, read, update delete notes",
     frontendTech: ["ReactJs"],
     backendTech: ["ExpressJs", "Postgresql", "Drizzle"],
     image: "/projects/notes-app.png",
