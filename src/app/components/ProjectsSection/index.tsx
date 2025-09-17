@@ -15,21 +15,18 @@ export default function ProjectsSection() {
         {projects.map((p) => (
           <Card key={p.title}>
             <CardHeader>
-              <CardTitle>{p.title}</CardTitle>
+              <CardTitle className="text-xl font-bold">{p.title}</CardTitle>
               {typeof p.desc === "string" ? (
                 <ProjectDescription summaryText={p.desc} />
               ) : (
                 p.desc
               )}
             </CardHeader>
-            <CardContent className="flex flex-col gap-4">
-              <Image
-                src={p.image}
-                alt={p.title}
-                width={600}
-                height={300}
-                className="rounded-md"
-              />
+
+            <CardContent className="flex h-full flex-col gap-4">
+              <div className="flex-1 w-full aspect-video rounded-md overflow-hidden relative">
+                <Image src={p.image} alt={p.title} fill objectFit="cover" />
+              </div>
               <div className="flex flex-col gap-1">
                 {p.frontendTech != null && (
                   <div className="flex flex-row gap-1 items-center">
@@ -46,7 +43,7 @@ export default function ProjectsSection() {
                   </div>
                 )}
               </div>
-              <div className="flex ml-auto gap-4">
+              <div className="flex ml-auto justify-self-end gap-4">
                 {p.live != null && (
                   <Button asChild>
                     <ExternalLink href={p.live} target="_blank">
@@ -93,7 +90,7 @@ const projects: Project[] = [
       "Uploadthing",
     ],
     backendTech: ["NestJS", "Postgres", "Drizzle", "Clerk", "Inngest"],
-    image: "/job-board.png",
+    image: "/projects/job-board.png",
     github: [
       {
         title: "FrontEnd",
@@ -107,10 +104,16 @@ const projects: Project[] = [
   },
   {
     title: "Notes App",
-    desc: "A CRUD note app to refresh my BE knowledge",
+    desc: "A note management application allow user to create, read, update delete notes",
     frontendTech: ["ReactJs"],
     backendTech: ["ExpressJs", "Postgresql", "Drizzle"],
-    image: "/note-app.png",
-    github: [{ title: "App", link: "https://github.com/hienhhcc/notes-app" }],
+    image: "/projects/notes-app.png",
+    github: [
+      {
+        title: "FrontEnd",
+        link: "https://github.com/hienhhcc/notes-app-react",
+      },
+      { title: "BackEnd", link: "https://github.com/hienhhcc/notes-app" },
+    ],
   },
 ];
