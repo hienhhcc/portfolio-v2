@@ -1,10 +1,11 @@
 import { ReactNode } from "react";
 
-type Project = {
+export type Project = {
   id: string;
   name: string;
   description: ReactNode;
-  image: string;
+  imageSrc: string;
+  imageAlt: string;
   isPersonal: boolean;
   live?: string;
   github?: {
@@ -13,21 +14,16 @@ type Project = {
   }[];
   frontendTech?: string[];
   backendTech?: string[];
-};
-
-export type PersonalProject = Project;
-
-export type WorkProject = Project & {
-  companyId: string;
-  memberCount: number;
-  responsibilities: string[];
+  companyId?: string;
+  memberCount?: number;
+  responsibilities?: string[];
 };
 
 export type WorkExperience = {
   id: string;
-  company: string;
+  companyName: string;
   position: string;
   startDate: Date;
   endDate: Date;
-  projects: WorkProject[];
+  projects: Project[];
 };

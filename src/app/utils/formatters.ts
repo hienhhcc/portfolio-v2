@@ -9,7 +9,7 @@ export function formatWorkStartEndDate(
   }
 
   return new Intl.DateTimeFormat("en-US", {
-    month: "2-digit",
+    month: "short",
     year: "numeric",
     ...options,
   }).format(date);
