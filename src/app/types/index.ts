@@ -4,8 +4,8 @@ export type Project = {
   id: string;
   name: string;
   description: ReactNode;
-  imageSrc: string;
-  imageAlt: string;
+  imageSrc?: string;
+  imageAlt?: string;
   isPersonal: boolean;
   features?: ReactNode[];
   live?: string;

@@ -134,4 +134,40 @@ export const projects: Project[] = [
     live: "https://mintforukraine.org/",
     isPersonal: false,
   },
+  {
+    id: "40ea7316-917a-41de-8a04-af9fb12e6872",
+    companyId: "1548b476-0331-403f-a6cf-6310001008fc",
+    name: "POS Management Application",
+    memberCount: 3,
+    description: "A web application for admin to manage POS device information",
+    imageAlt: "POS Management Application",
+    frontendTech: ["Vue.js", "TypeScript"],
+    responsibilities: [
+      "Collaborated with team member to migrate the project from Vue 2 to Vue 3",
+    ],
+    isPersonal: false,
+  },
+  {
+    id: "fb3d3387-8c40-4587-b3eb-299961369dfc",
+    companyId: "1548b476-0331-403f-a6cf-6310001008fc",
+    name: "BOHO",
+    memberCount: 4,
+    description:
+      "Web management system for tracking retailers donations to charity units based on products sold on the vend pos system.",
+    imageAlt: "POS Management Application",
+    frontendTech: ["ReactJs", "Redux", "Apollo-Client", "TypeScript"],
+    backendTech: [
+      "NodeJs",
+      "ExpressJs",
+      "GraphQL",
+      "Apollo-Server",
+      "MongoDB",
+      "Redis",
+    ],
+    responsibilities: [
+      "Implemented a feature that fetches the list of retailers using Apollo Client and displays it in a table on admin page.",
+      "Fixed a caching issue using the Apollo Client API to ensure data consistency.",
+    ],
+    isPersonal: false,
+  },
 ];

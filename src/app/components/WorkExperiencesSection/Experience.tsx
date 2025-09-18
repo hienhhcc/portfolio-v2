@@ -26,7 +26,7 @@ export default function Experience({
           {formatWorkStartEndDate(endDate)}
         </p>
       </div>
-      <div className="flex flex-col gap-2 mt-4">
+      <div className="flex flex-col gap-4 mt-4">
         {projects.map((project) => (
           <ProjectCard key={project.id} {...project} />
         ))}
