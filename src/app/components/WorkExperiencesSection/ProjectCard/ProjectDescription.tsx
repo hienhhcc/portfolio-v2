@@ -16,10 +16,10 @@ export default function ProjectDescription({
       <HoverCardTrigger asChild>
         <InfoIcon className="cursor-pointer size-5 text-foreground" />
       </HoverCardTrigger>
-      <HoverCardContent className="w-120">
-        <p className="text-base italic text-foreground leading-relaxed">
+      <HoverCardContent className="w-96 lg:w-156" align="center" side="bottom">
+        <div className="text-base italic text-foreground leading-relaxed">
           {description}
-        </p>
+        </div>
       </HoverCardContent>
     </HoverCard>
   );

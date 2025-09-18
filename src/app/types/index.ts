@@ -7,7 +7,7 @@ export type Project = {
   imageSrc: string;
   imageAlt: string;
   isPersonal: boolean;
-  features?: string[];
+  features?: ReactNode[];
   live?: string;
   github?: {
     title: string;

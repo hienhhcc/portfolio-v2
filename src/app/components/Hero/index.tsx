@@ -16,7 +16,7 @@ export default function HeroSection() {
       </p>
       <div className="flex gap-4">
         <Button asChild>
-          <Link href="#projects">View My Work</Link>
+          <Link href="#experiences">View My Work</Link>
         </Button>
         <Button variant="outline" asChild>
           <Link href="#contact">Contact Me</Link>

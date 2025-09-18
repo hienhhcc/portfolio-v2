@@ -61,17 +61,13 @@ export const projects: Project[] = [
         }
       />
     ),
-    frontendTech: [
-      "ReactJs",
-      "Next.js App Router",
-      "TailwindCSS",
-      "shadcn/ui",
-      "zod",
-      "@tanstack/react-table",
-      "@mdxeditor/editor",
-      "Uploadthing",
+    frontendTech: ["ReactJs", "Next.js App Router", "zod"],
+    backendTech: ["Next.js App Router", "DrizzleORM"],
+    features: [
+      "Custom Authenication Pages: Implemented custom sign-in/sign-up flows. Used cookies to store minimal user details while fetching extended profile data securely from the database when required.",
+      "OAuth2 Integration: Enabled third-party authentication by implementing OAuth2, allowing users to register and log in with GitHub and Discord accounts.",
+      "Role-Based Authorization: Added robust authorization checks to restrict access to sensitive routes, ensuring only authorized users can view protected pages such as the admin dashboard or logged-in user area.",
     ],
-    backendTech: ["NestJS", "Postgres", "Drizzle", "Clerk", "Inngest"],
     imageSrc: "/projects/job-board.png",
     imageAlt: "Job board application",
     github: [
@@ -119,6 +115,23 @@ export const projects: Project[] = [
       "Migrated the codebase from Next.js Page Router to App Router after it became stable and production-ready",
     ],
     live: "https://app.singlekey.com",
+    isPersonal: false,
+  },
+  {
+    id: "b92ccc94-0424-4ba3-b7be-9756e57d17c7",
+    companyId: "1548b476-0331-403f-a6cf-6310001008fc",
+    name: "MintForUkraine",
+    memberCount: 2,
+    description:
+      "A digital art and fundraising project: It invites people around the world to mint one of one million unique, AI-generated NFTs.",
+    imageSrc: "/projects/mint-for-ukraine.png",
+    imageAlt: "MintForUkraine",
+    frontendTech: ["ReactJs", "TypeScript", "styled-components"],
+    responsibilities: [
+      "Rebuilt the UI of the previous application using React based on the legacy UI, while improving performance and optimizing the overall user experience",
+      "Worked with the Product Owner to implement core business logic into the new front-end application",
+    ],
+    live: "https://mintforukraine.org/",
     isPersonal: false,
   },
 ];

@@ -6,7 +6,14 @@ import TechnologiesUsed from "@/app/components/WorkExperiencesSection/ProjectCar
 import { Project } from "@/app/types";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { CheckCircle2, EyeIcon, PinIcon } from "lucide-react";
+import {
+  CheckCircle2,
+  EyeIcon,
+  PinIcon,
+  StarIcon,
+  WrenchIcon,
+  ZapIcon,
+} from "lucide-react";
 import Image from "next/image";
 
 type Props = Project;
@@ -21,6 +28,7 @@ export default function ProjectCard({
   frontendTech,
   backendTech,
   responsibilities,
+  features,
   live,
   isPersonal,
 }: Props) {
@@ -51,17 +59,17 @@ export default function ProjectCard({
           {isPersonal && (
             <>
               <div className="relative pl-3 border-l-2 border-muted">
-                <p className="text-base italic text-muted-foreground leading-relaxed">
+                <div className="text-base italic text-muted-foreground leading-relaxed">
                   {description}
-                </p>
+                </div>
               </div>
               <ProjectCardSection
                 title="Features"
                 content={
                   <ul className="flex flex-col gap-2 text-md leading-relaxed">
-                    {responsibilities?.map((item, index) => (
+                    {features?.map((item, index) => (
                       <li key={index} className="flex items-start gap-2">
-                        <PinIcon className="h-4 w-4 text-primary mt-1.5 flex-shrink-0" />
+                        <ZapIcon className="h-4 w-4 text-amber-600 mt-1.5 flex-shrink-0 " />
                         <span className="text-foreground">{item}</span>
                       </li>
                     ))}
@@ -78,7 +86,7 @@ export default function ProjectCard({
                 <ul className="flex flex-col gap-2 text-md leading-relaxed">
                   {responsibilities?.map((item, index) => (
                     <li key={index} className="flex items-start gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-primary mt-1.5 flex-shrink-0" />
+                      <WrenchIcon className="h-4 w-4 text-emerald-700 mt-1.5 flex-shrink-0" />
                       <span className="text-foreground">{item}</span>
                     </li>
                   ))}
