@@ -12,7 +12,7 @@ export default function TechnologiesUsed({
         <Badge
           key={tech}
           variant={source === "frontend" ? "default" : "secondary"}
-          className="rounded-md hover:scale-105 transition-transform"
+          className="rounded-md"
         >
           {tech}
         </Badge>

@@ -7,6 +7,7 @@ export type Project = {
   imageSrc: string;
   imageAlt: string;
   isPersonal: boolean;
+  features?: string[];
   live?: string;
   github?: {
     title: string;

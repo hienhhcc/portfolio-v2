@@ -21,6 +21,11 @@ export const projects: Project[] = [
         }
       />
     ),
+    features: [
+      "Enables job seekers to create an account, upload their resumes, apply for job listings, and manage notification preferences for daily job updates.",
+      "Allows organizations to create, update, delete, and feature job postings. Employers within an organization can manage applicant statuses (e.g., denied, interviewed, interested) and configure personal notifications for new applications.",
+      "Leverages Clerk’s authentication system with built-in support for organizations and billing, enabling secure access control and scalable subscription management.",
+    ],
     frontendTech: [
       "ReactJs",
       "Next.js App Router",

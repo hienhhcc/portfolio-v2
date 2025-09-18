@@ -6,7 +6,7 @@ import TechnologiesUsed from "@/app/components/WorkExperiencesSection/ProjectCar
 import { Project } from "@/app/types";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { CheckCircle2, EyeIcon } from "lucide-react";
+import { CheckCircle2, EyeIcon, PinIcon } from "lucide-react";
 import Image from "next/image";
 
 type Props = Project;
@@ -34,7 +34,7 @@ export default function ProjectCard({
           className="rounded-tl-md rounded-bl-md object-cover"
         />
       </div>
-      <div className="flex flex-col gap-3 p-3">
+      <div className="flex flex-col gap-3 p-3 w-full">
         <CardContent className="flex flex-col gap-3 p-0">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
             <div className="flex flex-wrap items-center gap-2">
@@ -49,11 +49,26 @@ export default function ProjectCard({
           </div>
 
           {isPersonal && (
-            <div className="relative pl-3 border-l-2 border-muted">
-              <p className="text-base italic text-muted-foreground leading-relaxed">
-                {description}
-              </p>
-            </div>
+            <>
+              <div className="relative pl-3 border-l-2 border-muted">
+                <p className="text-base italic text-muted-foreground leading-relaxed">
+                  {description}
+                </p>
+              </div>
+              <ProjectCardSection
+                title="Features"
+                content={
+                  <ul className="flex flex-col gap-2 text-md leading-relaxed">
+                    {responsibilities?.map((item, index) => (
+                      <li key={index} className="flex items-start gap-2">
+                        <PinIcon className="h-4 w-4 text-primary mt-1.5 flex-shrink-0" />
+                        <span className="text-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                }
+              />
+            </>
           )}
 
           {responsibilities && responsibilities.length > 0 && (
@@ -95,7 +110,7 @@ export default function ProjectCard({
             </div>
           )}
         </CardContent>
-        <CardFooter className="flex flex-row justify-end gap-2 p-2! border-t lg:border-t-0">
+        <CardFooter className="flex flex-row justify-end gap-2 p-2! border-t lg:border-t-0 mt-auto">
           {live != null && (
             <Button asChild>
               <ExternalLink href={live} target="_blank">

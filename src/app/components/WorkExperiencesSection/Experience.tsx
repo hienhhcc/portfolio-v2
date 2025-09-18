@@ -14,9 +14,12 @@ export default function Experience({
   return (
     <div>
       <div className="flex flex-col gap-1 lg:flex-row lg:items-center lg:justify-between w-full">
-        <h3 className="text-2xl">
-          <span className="font-semibold">{position}</span> at{" "}
-          <span className="font-semibold">{companyName}</span>
+        <h3 className="text-2xl font-semibold flex flex-col lg:flex-row lg:items-center gap-2">
+          <span className="text-primary">{position}</span>
+          <span className="hidden lg:inline text-muted-foreground">·</span>
+          <span className="px-2 py-0.5 rounded-md bg-muted text-foreground">
+            {companyName}
+          </span>
         </h3>
         <p className="text-foreground font-semibold">
           {formatWorkStartEndDate(startDate)} -{" "}
