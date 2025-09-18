@@ -1,3 +1,4 @@
+import ExternalLink from "@/app/components/ExternalLink";
 import ProjectCard from "@/app/components/WorkExperiencesSection/ProjectCard";
 import { WorkExperience } from "@/app/types";
 import { formatWorkStartEndDate } from "@/app/utils/formatters";
@@ -7,6 +8,7 @@ type Props = WorkExperience;
 export default function Experience({
   position,
   companyName,
+  companyLink,
   projects,
   startDate,
   endDate,
@@ -17,9 +19,12 @@ export default function Experience({
         <h3 className="text-2xl font-semibold flex flex-col lg:flex-row lg:items-center gap-2">
           <span className="text-primary">{position}</span>
           <span className="hidden lg:inline text-muted-foreground">·</span>
-          <span className="px-2 py-0.5 rounded-md bg-muted text-foreground">
+          <ExternalLink
+            href={companyLink}
+            className="px-2 py-0.5 rounded-md bg-muted text-foreground text-xl"
+          >
             {companyName}
-          </span>
+          </ExternalLink>
         </h3>
         <p className="text-foreground font-semibold">
           {formatWorkStartEndDate(startDate)} -{" "}

@@ -23,6 +23,7 @@ export type Project = {
 export type WorkExperience = {
   id: string;
   companyName: string;
+  companyLink: string;
   position: string;
   startDate: Date;
   endDate: Date;
