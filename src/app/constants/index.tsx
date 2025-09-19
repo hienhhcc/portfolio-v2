@@ -36,7 +36,7 @@ export const projects: Project[] = [
       "@mdxeditor/editor",
       "Uploadthing",
     ],
-    backendTech: ["NestJS", "Postgres", "Drizzle", "Clerk", "Inngest"],
+    backendTech: ["NestJS", "Postgresql", "drizzle-orm", "Clerk", "Inngest"],
     imageSrc: "/projects/job-board.png",
     imageAlt: "Job board application",
     github: [
@@ -49,6 +49,7 @@ export const projects: Project[] = [
         link: "https://github.com/hienhhcc/job-board-be",
       },
     ],
+    updatedAt: new Date("2025-09-14"),
     isPersonal: true,
   },
   {
@@ -61,25 +62,21 @@ export const projects: Project[] = [
         }
       />
     ),
-    frontendTech: ["ReactJs", "Next.js App Router", "zod"],
-    backendTech: ["Next.js App Router", "DrizzleORM"],
+    frontendTech: ["ReactJs", "Next.js", "zod"],
+    backendTech: ["Next.js", "Postgresql", "Neon", "drizzle-orm"],
     features: [
       "Custom Authenication Pages: Implemented custom sign-in/sign-up flows. Used cookies to store minimal user details while fetching extended profile data securely from the database when required.",
       "OAuth2 Integration: Enabled third-party authentication by implementing OAuth2, allowing users to register and log in with GitHub and Discord accounts.",
       "Role-Based Authorization: Added robust authorization checks to restrict access to sensitive routes, ensuring only authorized users can view protected pages such as the admin dashboard or logged-in user area.",
     ],
-    imageSrc: "/projects/job-board.png",
-    imageAlt: "Job board application",
+    live: "https://nextjs-authentication-nolib-bxvp.vercel.app/",
     github: [
       {
         title: "FrontEnd",
-        link: "https://github.com/hienhhcc/job-board-fe",
-      },
-      {
-        title: "BackEnd",
-        link: "https://github.com/hienhhcc/job-board-be",
+        link: "https://github.com/hienhhcc/nextjs-authentication-nolib",
       },
     ],
+    updatedAt: new Date("2025-09-19"),
     isPersonal: true,
   },
   {

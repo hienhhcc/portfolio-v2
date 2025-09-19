@@ -1,7 +1,7 @@
 import ExternalLink from "@/app/components/ExternalLink";
 import GithubLinks from "@/app/components/ProjectsSection/GithubLinks";
 import ProjectCardSection from "@/app/components/WorkExperiencesSection/ProjectCard/ProjectCardSection";
-import ProjectDescription from "@/app/components/WorkExperiencesSection/ProjectCard/ProjectDescription";
+import ProjectHeader from "@/app/components/WorkExperiencesSection/ProjectCard/ProjectHeader";
 import TechnologiesUsed from "@/app/components/WorkExperiencesSection/ProjectCard/TechnologiesUsed";
 import { Project } from "@/app/types";
 import { Button } from "@/components/ui/button";
@@ -53,18 +53,11 @@ export default function ProjectCard({
       </div>
       <div className="flex flex-col gap-3 p-3 w-full">
         <CardContent className="flex flex-col gap-3 p-0">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
-            <div className="flex flex-wrap items-center gap-2">
-              <h4 className="text-2xl font-semibold">{name}</h4>
-              {!isPersonal && <ProjectDescription description={description} />}
-            </div>
-            {memberCount && (
-              <span>
-                {memberCount} {memberCount > 1 ? "members" : "member"}
-              </span>
-            )}
-          </div>
-
+          <ProjectHeader
+            name={name}
+            description={description}
+            isPersonal={isPersonal}
+          />
           {isPersonal && (
             <>
               <div className="relative pl-3 border-l-2 border-muted">
@@ -86,6 +79,18 @@ export default function ProjectCard({
                 }
               />
             </>
+          )}
+
+          {memberCount && (
+            <ProjectCardSection
+              title="Team size"
+              content={
+                <span>
+                  {memberCount} {memberCount > 1 ? "members" : "member"}
+                </span>
+              }
+              className="flex-row items-center gap-2"
+            />
           )}
 
           {responsibilities && responsibilities.length > 0 && (

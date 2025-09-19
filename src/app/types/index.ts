@@ -18,6 +18,7 @@ export type Project = {
   companyId?: string;
   memberCount?: number;
   responsibilities?: string[];
+  updatedAt?: Date;
 };
 
 export type WorkExperience = {
