@@ -25,6 +25,7 @@ export default function ProjectCard({
   features,
   live,
   isPersonal,
+  updatedAt,
 }: Props) {
   return (
     <Card className="flex flex-col gap-4 min-h-80 lg:flex-row  overflow-hidden py-0">
@@ -57,6 +58,7 @@ export default function ProjectCard({
             name={name}
             description={description}
             isPersonal={isPersonal}
+            updatedAt={updatedAt}
           />
           {isPersonal && (
             <>
