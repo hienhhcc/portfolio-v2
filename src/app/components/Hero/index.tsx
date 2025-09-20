@@ -3,7 +3,6 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
 import TypeWriter from "@/app/components/Hero/Typewriter";
 import NameText from "@/app/components/Hero/NameText";
-import { GraduationCap } from "lucide-react";
 import ExternalLink from "@/app/components/ExternalLink";
 
 export default function HeroSection() {
@@ -14,9 +13,8 @@ export default function HeroSection() {
       </Avatar>
       <NameText />
       <p className="flex items-center gap-2 text-lg font-medium">
-        <GraduationCap className="h-5 w-5 text-primary" />
         <span className="font-semibold">
-          Bachelor of Science in Software Engineering –{" "}
+          🎓 Bachelor of Science in Software Engineering{" "}
           <ExternalLink
             href={"https://hcmus.edu.vn/"}
             className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent font-extrabold text-md hover:font-extrabold"
