@@ -1,13 +1,12 @@
-import ExternalLink from "@/app/components/ExternalLink";
 import GithubLinks from "@/app/components/ProjectsSection/GithubLinks";
+import LiveButton from "@/app/components/WorkExperiencesSection/ProjectCard/LiveButton";
 import ProjectCardSection from "@/app/components/WorkExperiencesSection/ProjectCard/ProjectCardSection";
 import ProjectHeader from "@/app/components/WorkExperiencesSection/ProjectCard/ProjectHeader";
 import TechnologiesUsed from "@/app/components/WorkExperiencesSection/ProjectCard/TechnologiesUsed";
 import { Project } from "@/app/types";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { EyeIcon, WrenchIcon, ZapIcon } from "lucide-react";
+import { WrenchIcon, ZapIcon } from "lucide-react";
 import Image from "next/image";
 
 type Props = Project;
@@ -135,16 +134,7 @@ export default function ProjectCard({
           )}
         </CardContent>
         <CardFooter className="flex flex-row justify-end gap-2 p-2! border-t lg:border-t-0 mt-auto">
-          {live != null && (
-            <Button asChild>
-              <ExternalLink href={live} target="_blank">
-                <div className="flex items-center gap-1">
-                  <EyeIcon />
-                  Live
-                </div>
-              </ExternalLink>
-            </Button>
-          )}
+          {live != null && <LiveButton live={live} />}
           {github != null && <GithubLinks links={github} />}
         </CardFooter>
       </div>
