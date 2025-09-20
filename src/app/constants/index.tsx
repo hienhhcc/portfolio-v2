@@ -80,6 +80,29 @@ export const projects: Project[] = [
     isPersonal: true,
   },
   {
+    id: "c2567482-77da-4854-9f02-ce64ef8a0f97",
+    name: "React Memory Game",
+    description: (
+      <ProjectDescription summaryText={"A Memory game built on ReactJs"} />
+    ),
+    imageAlt: "Memory game",
+    imageSrc: "/projects/memory-game.png",
+    frontendTech: ["ReactJs"],
+    features: [
+      "Enable users to customize the number of players, theme, and grid size for the memory game.",
+      "Provide the option to restart with the current settings or begin a new game with a fresh configuration.",
+    ],
+    live: "https://memory-game-weld.vercel.app/",
+    github: [
+      {
+        title: "FrontEnd",
+        link: "https://github.com/hienhhcc/Memory-game",
+      },
+    ],
+    updatedAt: new Date("2022-12-22"),
+    isPersonal: true,
+  },
+  {
     id: "2a4c725e-4a0f-4533-a7fa-9f23df8ebd06",
     companyId: "1548b476-0331-403f-a6cf-6310001008fc",
     name: "SingleKey New Platform",
