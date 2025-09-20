@@ -4,6 +4,7 @@ import Link from "next/link";
 import TypeWriter from "@/app/components/Hero/Typewriter";
 import NameText from "@/app/components/Hero/NameText";
 import { GraduationCap } from "lucide-react";
+import ExternalLink from "@/app/components/ExternalLink";
 
 export default function HeroSection() {
   return (
@@ -15,7 +16,13 @@ export default function HeroSection() {
       <p className="flex items-center gap-2 text-lg font-medium">
         <GraduationCap className="h-5 w-5 text-primary" />
         <span className="font-semibold">
-          Bachelor of Science in Software Engineering – VNU-HCMUS
+          Bachelor of Science in Software Engineering –{" "}
+          <ExternalLink
+            href={"https://hcmus.edu.vn/"}
+            className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent font-extrabold text-md hover:font-extrabold"
+          >
+            VNU-HCMUS
+          </ExternalLink>
         </span>
       </p>
       <p className="text-xl font-semibold text-foreground max-w-lg whitespace-nowrap">

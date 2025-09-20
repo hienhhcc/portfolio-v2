@@ -5,6 +5,7 @@ import { ReactNode } from "react";
 import { ThemeProvider } from "@/app/components/ThemeProvider";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
+import BackToTopButton from "@/app/components/BackToTop";
 
 const geistSans = Inter({
   variable: "--font-geist-sans",
@@ -26,11 +27,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className="w-full h-full scroll-smooth"
-    >
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} bg-background text-foreground antialiased flex flex-col w-full h-full`}
       >
@@ -41,8 +38,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main className="container mx-auto px-4 flex-1">{children}</main>
+          <main className="relative container mx-auto px-4 flex-1">
+            {children}
+          </main>
           <Footer />
+          <BackToTopButton />
         </ThemeProvider>
       </body>
     </html>
