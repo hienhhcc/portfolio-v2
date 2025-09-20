@@ -62,7 +62,7 @@ export const projects: Project[] = [
         }
       />
     ),
-    frontendTech: ["ReactJs", "Next.js", "zod"],
+    frontendTech: ["ReactJs", "Next.js App Router", "zod"],
     backendTech: ["Next.js", "Postgresql", "Neon", "drizzle-orm"],
     features: [
       "Custom Authenication Pages: Implemented custom sign-in/sign-up flows. Used cookies to store minimal user details while fetching extended profile data securely from the database when required.",

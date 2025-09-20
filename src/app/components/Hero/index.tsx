@@ -3,6 +3,7 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
 import TypeWriter from "@/app/components/Hero/Typewriter";
 import NameText from "@/app/components/Hero/NameText";
+import { GraduationCap } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -11,6 +12,12 @@ export default function HeroSection() {
         <AvatarImage src="/me.jpg" alt="Vũ Vinh Hiển" />
       </Avatar>
       <NameText />
+      <p className="flex items-center gap-2 text-lg font-medium">
+        <GraduationCap className="h-5 w-5 text-primary" />
+        <span className="font-semibold">
+          Bachelor of Science in Software Engineering – VNU-HCMUS
+        </span>
+      </p>
       <p className="text-xl font-semibold text-foreground max-w-lg whitespace-nowrap">
         <TypeWriter />
       </p>
