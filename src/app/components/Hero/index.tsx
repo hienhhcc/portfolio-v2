@@ -26,6 +26,12 @@ export default function HeroSection() {
       <p className="text-xl font-semibold text-foreground max-w-lg whitespace-nowrap">
         <TypeWriter />
       </p>
+      <p className="max-w-2xl mx-auto text-foreground text-balance">
+        I’m a Frontend Engineer with 4+ years experience building modern web
+        apps. Passionate about React, Next.js, performance, and creating
+        accessible UI. Outside of coding, I enjoy design systems and developer
+        experience.
+      </p>
       <div className="flex gap-4">
         <Button asChild>
           <Link href="#experiences">View My Work</Link>

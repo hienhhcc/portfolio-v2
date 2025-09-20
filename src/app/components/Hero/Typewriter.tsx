@@ -12,10 +12,10 @@ export default function TypeWriter() {
         "FullStack Engineer In Progress",
         "Always Learning, Always Building",
       ]}
-      loop={3}
+      loop
       cursor
       cursorStyle="|"
-      typeSpeed={70}
+      typeSpeed={40}
       deleteSpeed={50}
       delaySpeed={2000}
     />
