@@ -5,7 +5,7 @@ type HomeSectionProps = ComponentProps<"section"> & {
   title: string;
 };
 
-export default function HomeSection({
+export default function Section({
   id,
   className,
   title,

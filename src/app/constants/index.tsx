@@ -191,3 +191,37 @@ export const projects: Project[] = [
     isPersonal: false,
   },
 ];
+
+export enum ESkill {
+  Language = "Language",
+  Frameworks = "Frameworks",
+  Tools = "Tools",
+  Soft = "Soft",
+}
+
+export const skills = {
+  [ESkill.Language]: ["JavaScript", "TypeScript"],
+  [ESkill.Frameworks]: [
+    "ReactJs",
+    "Next.js",
+    "TailwindCSS",
+    "shadcn/ui",
+    "MUI",
+    "styled-components",
+    "Playwright",
+    "Cypress",
+    "NodeJs",
+    "ExpressJs",
+    "NestJs",
+  ],
+  [ESkill.Tools]: [
+    "Asana",
+    "Trello",
+    "Slack",
+    "Sentry",
+    "Docker",
+    "Git",
+    "Webpack",
+  ],
+  [ESkill.Soft]: ["Problem Solving", "Collaboration", "Communication"],
+} as const;

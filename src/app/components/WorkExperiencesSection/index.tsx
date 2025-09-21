@@ -1,6 +1,6 @@
 import { WorkExperience } from "@/app/types";
 import { projects } from "@/app/constants";
-import HomeSection from "@/app/components/HomeSection";
+import Section from "@/app/components/Section";
 import Experience from "@/app/components/WorkExperiencesSection/Experience";
 
 const workExperiences: WorkExperience[] = [
@@ -23,12 +23,12 @@ const workExperiences: WorkExperience[] = [
 
 export default function WorkExperiencesSection() {
   return (
-    <HomeSection id="experiences" title={"Work Experiences"}>
+    <Section id="experiences" title={"Work Experiences"}>
       <div className="flex flex-col gap-12">
         {workExperiences.map((exp) => (
           <Experience key={exp.id} {...exp} />
         ))}
       </div>
-    </HomeSection>
+    </Section>
   );
 }
