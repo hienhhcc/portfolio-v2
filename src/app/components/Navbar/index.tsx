@@ -8,11 +8,11 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background">
       <nav className="container flex items-center justify-between h-16 mx-auto px-4 sm:px-0">
-        <Link href="/" className="font-bold">
+        <Link href="/" className="font-bold flex-1">
           Hienhhcc
         </Link>
         <DesktopNavLinks />
-        <div className="flex items-center gap-2">
+        <div className="flex items-center justify-end gap-2 flex-1">
           <DownloadCVButton />
           <ThemeToggle />
           <Hamburger />

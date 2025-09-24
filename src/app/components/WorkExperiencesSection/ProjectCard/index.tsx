@@ -1,5 +1,5 @@
 import GithubLinks from "@/app/components/ProjectsSection/GithubLinks";
-import LiveButton from "@/app/components/WorkExperiencesSection/ProjectCard/LiveButton";
+import LiveDemoButton from "@/app/components/WorkExperiencesSection/ProjectCard/LiveButton";
 import ProjectCardSection from "@/app/components/WorkExperiencesSection/ProjectCard/ProjectCardSection";
 import ProjectHeader from "@/app/components/WorkExperiencesSection/ProjectCard/ProjectHeader";
 import TechnologiesUsed from "@/app/components/WorkExperiencesSection/ProjectCard/TechnologiesUsed";
@@ -134,7 +134,7 @@ export default function ProjectCard({
           )}
         </CardContent>
         <CardFooter className="flex flex-row justify-end gap-2 p-2! border-t lg:border-t-0 mt-auto">
-          {live != null && <LiveButton live={live} />}
+          {live != null && <LiveDemoButton live={live} />}
           {github != null && <GithubLinks links={github} />}
         </CardFooter>
       </div>
