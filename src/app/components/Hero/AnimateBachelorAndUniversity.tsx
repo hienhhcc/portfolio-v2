@@ -1,19 +1,13 @@
 "use client";
+import FadeInBottomMotion from "@/app/components/Animation/FadeInBottomMotion";
 import ExternalLink from "@/app/components/ExternalLink";
 import NameText from "@/app/components/Hero/NameText";
 import TypeWriter from "@/app/components/Hero/Typewriter";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { motion } from "motion/react";
 
 export default function AnimateSelfIntroduction() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true }}
-      className="flex flex-col items-center text-center gap-6"
-    >
+    <FadeInBottomMotion className="flex flex-col items-center text-center gap-6">
       <Avatar className="h-28 w-28">
         <AvatarImage src="/me.jpg" alt="Vũ Vinh Hiển" />
       </Avatar>
@@ -34,6 +28,6 @@ export default function AnimateSelfIntroduction() {
       <p className="text-xl font-semibold text-foreground max-w-lg whitespace-nowrap">
         <TypeWriter />
       </p>
-    </motion.div>
+    </FadeInBottomMotion>
   );
 }

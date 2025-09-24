@@ -1,5 +1,5 @@
 import ExternalLink from "@/app/components/ExternalLink";
-import Section from "@/app/components/Section";
+import Section from "@/app/components/CommonSection";
 import GithubIcon from "@/components/GithubIcon";
 import LinkedInIcon from "@/components/LinkedInIcon";
 import { MailIcon } from "lucide-react";

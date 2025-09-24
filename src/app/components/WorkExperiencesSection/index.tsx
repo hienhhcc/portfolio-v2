@@ -1,6 +1,6 @@
 import { WorkExperience } from "@/app/types";
 import { projects } from "@/app/constants";
-import Section from "@/app/components/Section";
+import Section from "@/app/components/CommonSection";
 import Experience from "@/app/components/WorkExperiencesSection/Experience";
 
 const workExperiences: WorkExperience[] = [

@@ -1,4 +1,4 @@
-import Section from "@/app/components/Section";
+import Section from "@/app/components/CommonSection";
 import ProjectCard from "@/app/components/WorkExperiencesSection/ProjectCard";
 import { projects } from "@/app/constants";
 

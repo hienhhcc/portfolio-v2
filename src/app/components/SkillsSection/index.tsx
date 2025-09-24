@@ -1,4 +1,4 @@
-import Section from "@/app/components/Section";
+import Section from "@/app/components/CommonSection";
 import { ESkill, skills } from "@/app/constants";
 import { mapSkillToLabel } from "@/app/utils/mapSkillToLabel";
 import { Badge } from "@/components/ui/badge";
