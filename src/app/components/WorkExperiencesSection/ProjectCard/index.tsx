@@ -27,7 +27,7 @@ export default function ProjectCard({
   updatedAt,
 }: Props) {
   return (
-    <Card className="flex flex-col gap-4 min-h-80 lg:flex-row  overflow-hidden py-0">
+    <Card className="flex flex-col gap-4 min-h-80 lg:flex-row overflow-hidden py-0 shadow-md">
       <div
         className={cn(
           "relative min-w-32 w-full h-64 border-b lg:max-w-1/3 lg:w-200 lg:h-auto lg:border-b-0 shadow-md",
