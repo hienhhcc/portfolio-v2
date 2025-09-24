@@ -13,8 +13,8 @@ const geistSans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "This is Hienhhcc's portfolio",
+  title: "Hien's portfolio",
+  description: "This is Hien's portfolio",
 };
 export const viewport: Viewport = {
   width: "device-width",
