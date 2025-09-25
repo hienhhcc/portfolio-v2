@@ -30,3 +30,13 @@ export type WorkExperience = {
   endDate: Date;
   projects: Project[];
 };
+
+export type SkillMeasureType = {
+  icon: ReactNode;
+  skillName: string;
+  value: number;
+};
+
+export type ClassName = {
+  className?: string;
+};

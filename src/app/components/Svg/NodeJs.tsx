@@ -1,6 +1,13 @@
-export default function NodeJsSvg() {
+import { ClassName } from "@/app/types";
+
+export default function NodeJsSvg({ className }: ClassName) {
   return (
-    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      role="img"
+      viewBox="0 0 24 24"
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <title>Node.js</title>
       <path
         fill="#5FA04E"

@@ -4,9 +4,11 @@ import ExpressJsSkillBox from "@/app/components/SkillsSection/ExpressJsSkillBox"
 import NestJsSkillBox from "@/app/components/SkillsSection/NestJsSkillBox";
 import NextJsSkillBox from "@/app/components/SkillsSection/NextJsSkillBox";
 import NodeJsSkillBox from "@/app/components/SkillsSection/NodeJsSkillBox";
+import OtherSkills from "@/app/components/SkillsSection/OtherSkills";
 import PlaywrightSkillBox from "@/app/components/SkillsSection/PlaywrightSkillBox";
 import ReactSkillBox from "@/app/components/SkillsSection/ReactSkillBox";
 import ReduxSkillBox from "@/app/components/SkillsSection/ReduxSkillBox";
+import SkillMeasureList from "@/app/components/SkillsSection/SkillMeasureList";
 import TanstackQuerySkillBox from "@/app/components/SkillsSection/TanstackQueryBox";
 
 export default function SkillsSection() {
@@ -25,7 +27,10 @@ export default function SkillsSection() {
             <PlaywrightSkillBox />
           </AnimateSkills>
         </div>
-        <div className="flex-1">hi</div>
+        <div className="flex-1">
+          <SkillMeasureList />
+          <OtherSkills />
+        </div>
       </div>
     </Section>
   );

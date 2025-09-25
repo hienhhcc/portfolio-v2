@@ -1,4 +1,6 @@
-export default function NestJsSvg() {
+import { ClassName } from "@/app/types";
+
+export default function NestJsSvg(props: ClassName) {
   return (
     <svg
       role="img"
@@ -6,6 +8,7 @@ export default function NestJsSvg() {
       width={64}
       height={64}
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <title>NestJS</title>
       <path

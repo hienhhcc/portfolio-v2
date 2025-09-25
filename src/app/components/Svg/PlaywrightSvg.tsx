@@ -1,4 +1,6 @@
-export default function PlaywrightSvg() {
+import { ClassName } from "@/app/types";
+
+export default function PlaywrightSvg(props: ClassName) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -7,6 +9,7 @@ export default function PlaywrightSvg() {
       id="Playwright--Streamline-Svg-Logos"
       height="64"
       width="64"
+      {...props}
     >
       <desc>Playwright Streamline Icon: https://streamlinehq.com</desc>
       <path

@@ -15,7 +15,7 @@ export default function FadeInBottomMotion<T extends ElementType>({
   className,
   ...motionProps
 }: AnimateTitleProps<T>) {
-  const Component = motion(as || "div");
+  const Component = motion.create(as || "div");
 
   return (
     <Component
