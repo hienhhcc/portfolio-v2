@@ -1,26 +1,31 @@
 import Section from "@/app/components/CommonSection";
-import { ESkill, skills } from "@/app/constants";
-import { mapSkillToLabel } from "@/app/utils/mapSkillToLabel";
-import { Badge } from "@/components/ui/badge";
+import AnimateSkills from "@/app/components/SkillsSection/AnimateSkills";
+import ExpressJsSkillBox from "@/app/components/SkillsSection/ExpressJsSkillBox";
+import NestJsSkillBox from "@/app/components/SkillsSection/NestJsSkillBox";
+import NextJsSkillBox from "@/app/components/SkillsSection/NextJsSkillBox";
+import NodeJsSkillBox from "@/app/components/SkillsSection/NodeJsSkillBox";
+import PlaywrightSkillBox from "@/app/components/SkillsSection/PlaywrightSkillBox";
+import ReactSkillBox from "@/app/components/SkillsSection/ReactSkillBox";
+import ReduxSkillBox from "@/app/components/SkillsSection/ReduxSkillBox";
+import TanstackQuerySkillBox from "@/app/components/SkillsSection/TanstackQueryBox";
 
 export default function SkillsSection() {
   return (
-    <Section id="skills" title={"My Skills"}>
-      <div className="flex flex-col gap-2">
-        {Object.entries(skills).map(([cat, items]) => (
-          <div key={cat} className="flex flex-row flex-wrap gap-2">
-            <h3 className="font-semibold text-xl">
-              {mapSkillToLabel(cat as ESkill)}:
-            </h3>
-            <div className="flex gap-2 flex-wrap items-center">
-              {items.map((s) => (
-                <Badge key={s} variant="default" className="h-5.5">
-                  {s}
-                </Badge>
-              ))}
-            </div>
-          </div>
-        ))}
+    <Section id="skills" title={"Tech Stack"}>
+      <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center gap-4">
+        <div className="flex justify-center items-center flex-1">
+          <AnimateSkills>
+            <ReactSkillBox />
+            <ReduxSkillBox />
+            <TanstackQuerySkillBox />
+            <NextJsSkillBox />
+            <NodeJsSkillBox />
+            <ExpressJsSkillBox />
+            <NestJsSkillBox />
+            <PlaywrightSkillBox />
+          </AnimateSkills>
+        </div>
+        <div className="flex-1">hi</div>
       </div>
     </Section>
   );
