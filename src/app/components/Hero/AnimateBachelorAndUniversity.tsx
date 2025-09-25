@@ -13,7 +13,7 @@ export default function AnimateSelfIntroduction() {
       </Avatar>
       <div>
         <NameText />
-        <p className="flex items-center gap-2 text-lg font-medium mt-4">
+        <p className="flex items-center gap-2 text-lg lg:text-xl font-medium mt-4">
           <span className="font-semibold">
             🎓 Bachelor of Science in Software Engineering{" "}
             <ExternalLink

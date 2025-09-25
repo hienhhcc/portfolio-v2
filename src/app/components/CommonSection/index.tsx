@@ -14,7 +14,11 @@ export default function Section({
   ...sectionProps
 }: HomeSectionProps) {
   return (
-    <section id={id} {...sectionProps} className={cn("py-16", className)}>
+    <section
+      id={id}
+      {...sectionProps}
+      className={cn("py-8 lg:py-16", className)}
+    >
       <AnimateTitle>{title}</AnimateTitle>
       {children}
     </section>
