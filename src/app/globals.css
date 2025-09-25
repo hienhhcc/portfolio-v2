@@ -46,13 +46,13 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
-  --animate-shine: shine 4s ease-in-out infinite;
+  --animate-shine: shine 7s ease-in-out infinite;
   @keyframes shine {
     0% {
       left: -100%;
       transition-property: left;
     }
-    20%,
+    12%,
     100% {
       left: 100%;
       transition-property: left;

@@ -21,7 +21,7 @@ export default function FadeInBottomMotion<T extends ElementType>({
     <Component
       initial={{ opacity: 0, y: 15 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
       viewport={{ once: true }}
       className={className}
       {...motionProps}
