@@ -17,7 +17,7 @@ export default function SlideInLeftMotion({
     <motion.div
       initial={{ opacity: 0, x: -30 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1, ease: "backOut" }}
+      transition={{ duration: 1, delay: 0.2, ease: "backOut" }}
       viewport={{ once: true }}
       className={className}
       {...motionProps}

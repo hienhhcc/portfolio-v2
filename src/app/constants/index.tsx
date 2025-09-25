@@ -83,7 +83,9 @@ export const projects: Project[] = [
     id: "c2567482-77da-4854-9f02-ce64ef8a0f97",
     name: "React Memory Game",
     description: (
-      <ProjectDescription summaryText={"A Memory game built on ReactJs"} />
+      <ProjectDescription
+        summaryText={"A Memory game built on top of ReactJs"}
+      />
     ),
     imageAlt: "Memory game",
     imageSrc: "/projects/memory-game.png",

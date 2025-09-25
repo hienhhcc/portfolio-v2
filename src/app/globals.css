@@ -140,4 +140,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  html,
+  body,
+  main {
+    scroll-behavior: smooth !important;
+  }
 }

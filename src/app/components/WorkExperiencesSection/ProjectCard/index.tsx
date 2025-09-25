@@ -46,7 +46,8 @@ export default function ProjectCard({
           )}
           {imageSrc == null && (
             <Image
-              src={"/no-image-available.png"}
+              src={"/no-image.svg"}
+              className="invert-0 dark:invert-100"
               width={80}
               height={80}
               alt="No image available"
