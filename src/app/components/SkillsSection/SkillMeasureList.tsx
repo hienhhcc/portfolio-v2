@@ -1,10 +1,10 @@
+import ClientSkillMeasure from "@/app/components/SkillsSection/ClientSkillMeasure";
 import NestJsSvg from "@/app/components/Svg/NestJsSvg";
 import NodeJsSvg from "@/app/components/Svg/NodeJs";
 import PlaywrightSvg from "@/app/components/Svg/PlaywrightSvg";
 import ReactSvg from "@/app/components/Svg/ReactSvg";
 import TypescriptSvg from "@/app/components/Svg/TypescriptSvg";
 import { SkillMeasureType } from "@/app/types";
-import { Progress } from "@/components/ui/progress";
 
 const measures: SkillMeasureType[] = [
   {
@@ -37,17 +37,8 @@ const measures: SkillMeasureType[] = [
 export default function SkillMeasureList() {
   return (
     <div className="flex flex-col gap-4">
-      {measures.map((m) => (
-        <div key={m.skillName} className="flex flex-col gap-2">
-          <div className="flex gap-2 justify-between items-center">
-            <div className="flex items-center gap-2">
-              {m.icon}
-              <div className="text-lg font-bold">{m.skillName}</div>
-            </div>
-            <div className="text-foreground">{m.value}%</div>
-          </div>
-          <Progress value={m.value} />
-        </div>
+      {measures.map((m, index) => (
+        <ClientSkillMeasure key={m.skillName} {...m} delay={index * 0.15} />
       ))}
     </div>
   );
