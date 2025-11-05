@@ -1,3 +1,4 @@
+import AchievementsAndCertificationsSection from "@/app/components/AchievementsAndCertificationsSection";
 import ContactSection from "@/app/components/ContactSection";
 import HeroSection from "@/app/components/Hero";
 import PersonalProjectsSection from "@/app/components/ProjectsSection";
@@ -16,6 +17,8 @@ export default function Home() {
       <PersonalProjectsSection />
       <Separator />
       <SkillsSection />
+      <Separator />
+      <AchievementsAndCertificationsSection />
       <Separator />
       <ContactSection />
     </Fragment>

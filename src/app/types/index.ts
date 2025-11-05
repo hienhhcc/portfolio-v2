@@ -40,3 +40,11 @@ export type SkillMeasureType = {
 export type ClassName = {
   className?: string;
 };
+
+export type Certification = {
+  title: string;
+  startDate: string;
+  endDate?: string;
+  validationNumber?: string;
+  validationUrl: string;
+};

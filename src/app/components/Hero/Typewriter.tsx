@@ -6,7 +6,7 @@ export default function TypeWriter() {
   return (
     <ReactSimpleTypewriter
       words={[
-        "I am a FrontEnd Engineer",
+        "I am a Front-end Engineer",
         "React & Next.js Enthusiast",
         "TypeScript Lover",
         "FullStack Engineer In Progress",

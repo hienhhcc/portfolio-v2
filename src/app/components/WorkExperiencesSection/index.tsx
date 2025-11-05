@@ -8,7 +8,7 @@ const workExperiences: WorkExperience[] = [
     id: "1548b476-0331-403f-a6cf-6310001008fc",
     companyName: "HDWEBSOFT - Software Development Company",
     companyLink: "https://www.linkedin.com/company/hdwebsoft/",
-    position: "Frontend Engineer",
+    position: "Front-end Engineer",
     startDate: new Date("2021-08"),
     endDate: new Date("2025-07"),
     projects: projects.filter((p) => {

@@ -14,7 +14,7 @@ export default function AnimateSelfIntroduction() {
       <div>
         <NameText />
         <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-b from-orange-400 to-red-700 bg-clip-text text-transparent mt-4">
-          FrontEnd Web Developer
+          Front-end Web Developer
         </div>
         <p className="flex items-center gap-2 text-lg lg:text-xl font-medium mt-4">
           <span className="font-semibold">
